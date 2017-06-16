@@ -1,0 +1,23 @@
+{
+  "name": "terminus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgemurta/terminus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jorgemurta/terminus/issues"
+  },
+  "homepage": "https://github.com/jorgemurta/terminus#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "mosca": "^2.5.1"
+  }
+}
