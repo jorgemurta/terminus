@@ -1,6 +1,8 @@
 const server = require('./lib/server')
 const express = require('express')
 const app = express()
+const httpServer = require('http').createServer(app)
+const io = require('socket.io')(httpServer)
 
 const settings = {
   port: 1883,
@@ -18,9 +20,9 @@ server.ready(() => {
 })
 
 app.use(require('./web/controllers'))
+app.set('view engine', 'pug')
+app.set('views', './web/views')
 
 function startWeb() {
-    app.listen(3000, function () {
-      console.log('Example app listening on port 3000!')
-    })
+    httpServer.listen(3000)
 }
